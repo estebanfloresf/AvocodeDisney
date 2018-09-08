@@ -1,0 +1,55 @@
+@import "../mixins/font";
+
+/* Style for "Header" */
+.header {
+    // width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+
+.header_text {
+    position: absolute;
+    width: 60%;
+    right: 4;
+}
+
+.header_text_1 {
+    width: 60%;
+    @include font(#ffffff, 40px, 300, 54px, -1.8px);
+}
+
+.devices {
+    position: absolute;
+    left: -85px;
+    top: -75px;
+    width: 90%;
+
+    img {
+        height: auto;
+        max-width: 85%;
+    }
+}
+
+.header_text {
+    position: absolute;
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .devices {
+        display: flex;
+        flex-direction: column;
+        /* align horizontal */
+        justify-content: center;
+        /* align vertical */
+        align-items: center;
+        left: -30px;
+        top: 0px;
+
+        img {
+            height: auto;
+            max-width: 65%;
+        }
+    }
+}

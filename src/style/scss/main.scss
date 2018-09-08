@@ -1,0 +1,20 @@
+// Bootstrap Required
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins";
+// // Bootstrap Optional
+// @import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/bootstrap";
+// Custom SCSS
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/variables";
+@import "mixins/line";
+
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@include line()

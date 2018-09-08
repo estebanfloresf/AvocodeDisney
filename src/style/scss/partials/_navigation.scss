@@ -1,0 +1,102 @@
+@import "../mixins/font";
+// Navigation Variables
+$content-width: 100%;
+$breakpoint: 768px;
+$nav-height: 42px;
+// $nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581dc;
+
+.navbar {
+	padding-top: 54px;
+	z-index: 3;
+}
+
+.navigation {
+	width: $content-width;
+	background-image: url("../../../images/header/Header_BG.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+
+	&::after {
+		/* set the padding top % to match 600/800 = .75 */
+		padding-top: 53%;
+		display: block;
+		content: '';
+	}
+}
+
+div.image-gallery {
+	display: flex;
+	/* align horizontal */
+	justify-content: center;
+	/* align vertical */
+	align-items: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	@include font(#ffffff, 16px, 500, 0, -0.32px);
+	// line-height: 32px;
+	/* Text style for "Buy a Gift" */
+}
+
+.btn-nav {
+	/* Style for "Rounded Re" */
+	width: 190px;
+	height: 42px;
+	box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
+	border-radius: 21px;
+	background-color: #ffffff;
+	/* Style for "Free Trial" */
+	@include font(#ff4b64, 14px, 700, 29px, 2.8px);
+	text-transform: uppercase;
+	/* Text style for "Free Trial" */
+	letter-spacing: 2.8px;
+}
+
+@media (max-width: 768px) {
+
+	// .navigation {
+	// 	height: 70%;
+	// }
+	nav {
+		margin-top: 20px;
+	}
+
+	.navbar-brand {
+		display: none;
+	}
+
+	.navbar-toggler {
+		margin-left: 15px;
+		z-index: 1;
+	}
+
+	.navbar-right {
+		margin: 0;
+	}
+
+	.navbar-right>li,
+	.navbar-header {
+		float: left;
+	}
+
+	.navbar-right>li>a {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.collapsing,
+	.collapse.in {
+		top: 50px;
+		position: absolute;
+		width: 100%;
+	}
+}

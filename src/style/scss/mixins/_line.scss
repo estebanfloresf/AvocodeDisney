@@ -1,0 +1,21 @@
+// Function that creates span class:
+//  span-sm-blue
+//  span-lg-blue
+@mixin line() {
+    $colors-list: (red:$red, yellow:$yellow, green:$green, blue:$blue);
+    $widths-list: (sm:'20px', lg:'40px');
+
+    $class-slug: span !default @each $key,
+    $val in $colors-list {
+
+        @each $key2,
+        $val2 in $widths-list {
+            .#{$class-slug}-#{$key2}-#{$key} {
+                width: #{$val2};
+                height: 10px;
+                border-radius: 5px;
+                background-color: #{$val};
+            }
+        }
+    }
+}
