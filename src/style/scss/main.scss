@@ -11,10 +11,17 @@
 @import "partials/navigation";
 @import "partials/variables";
 @import "mixins/line";
+@include line();
 
 body {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
 
-@include line()
+.line_container {
+    position: relative;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

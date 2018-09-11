@@ -1,22 +1,32 @@
 @import "../mixins/font";
+@import "../mixins/button";
 
 /* Style for "Header" */
 .header {
-    // width: 100%;
+    width: 100%;
     height: auto;
     display: flex;
+    align-items: center;
     position: relative;
 }
 
 .header_text {
     position: absolute;
-    width: 60%;
-    right: 4;
+    width: auto;
+    left: 65%;
+    top: 65%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header_text_1 {
     width: 60%;
-    @include font(#ffffff, 40px, 300, 54px, -1.8px);
+    @include font(#ffffff, 3vw, 300, 3.5vw, -1.8px);
+}
+
+.header_text_2 {
+    width: 60%;
+    @include font(#ffffff, 6vw, 700, 6vw, -3.2px);
 }
 
 .devices {
@@ -31,9 +41,22 @@
     }
 }
 
-.header_text {
-    position: absolute;
-    width: 60%;
+.btn-subscribe {
+    flex: 1;
+    // margin-top: 20px;
+    @include button(240px, 60px, 30px, #fff) @include font($red, 14px, 700, 32px, 2.8px);
+
+    &:hover {
+        @include button(240px, 60px, 30px, $yellow) @include font(#fff, 14px, 700, 32px, 2.8px);
+    }
+}
+
+.disclaimer {
+    /* Style for "Now only £" */
+    width: 177px;
+    height: 13px;
+    opacity: 0.5;
+    @include font(#ffffff, 14px, 500, 54px, -0.56px);
 }
 
 @media (max-width: 768px) {
